@@ -1,4 +1,71 @@
-button{
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #1C273C;
+    font-family: 'Open Sans', sans-serif;
+    padding: 2rem;
+}
+
+/* NAV */
+.darkMode, .lightMode{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.darkMode svg, .lightMode svg{
+    cursor: pointer;
+}
+
+.lightMode{
+    display: none;
+}
+
+/* MAIN */
+
+/* main{
+    position: relative;
+} */
+
+.appName{
+    color: #E9C597;
+    text-align: center;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+.mainContainer{
+    width: 80%;
+    height: 70vh;
+    margin: auto;
+    margin-top: 3rem;
+}
+
+.fixedLeftBar{
+    width: 20%;
+    height: 100%;
+    background-color: #354259;
+    border-radius: 5px;
+    border-bottom: 5px solid #54BAB9;
+    padding: 2rem;
+}
+
+.actions{
+    display: flex;
+    /* align-items: center; */
+    color: white;
+}
+
+.actions p{
+    padding-left: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* button{
     display: block;
     margin: 5px 5px;
 }
@@ -14,5 +81,4 @@ button{
     width: 40%;
     background-color: red;
     color: white;
-    /* border: 2px solid red; */
-}
+} */
