@@ -26,10 +26,6 @@ body{
 
 /* MAIN */
 
-/* main{
-    position: relative;
-} */
-
 .appName{
     color: #E9C597;
     text-align: center;
@@ -43,6 +39,9 @@ body{
     height: 70vh;
     margin: auto;
     margin-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid pink;
 }
 
 .fixedLeftBar{
@@ -56,13 +55,65 @@ body{
 
 .actions{
     display: flex;
-    /* align-items: center; */
     color: white;
 }
 
 .actions p{
     padding-left: 1rem;
     margin-bottom: 2rem;
+}
+
+.Task-sections{
+    width: 78%;
+    border-right: 1px solid red;
+    
+}
+
+.task-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #44A0A0;
+    margin: 1rem;
+}
+
+.task-bar h3{
+    background-color: #44A0A0;
+    padding: 5px 30px;
+    color: white;
+    border-radius: 10px;
+}
+
+.mark{
+    display: flex;
+}
+
+.mark > p{
+    margin-left: 10px;
+}
+
+.complete{
+    display: none;
+}
+
+.Task1{
+    width: 45%;
+    
+    background-color: #354259;
+    border-radius: 5px;
+    border-bottom: 5px solid #54BAB9;
+    color: white;
+    padding: 1rem;
+}
+
+.task-title{
+    margin-bottom: 1rem;
+}
+
+.mark-del{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
 }
 
 /* button{
