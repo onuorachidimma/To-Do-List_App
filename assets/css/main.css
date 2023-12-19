@@ -12,19 +12,22 @@ body{
 }
 
 .modal{
-    position: absolute;
+    position: fixed;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
     display: none;
 }
 
 /* NAV */
+
+nav{
+    float: right;
+}
 .darkMode, .lightMode{
-    display: flex;
-    justify-content: flex-end;
+   
 }
 
 svg, i{
@@ -36,6 +39,9 @@ svg, i{
 }
 
 /* MAIN */
+main{
+    margin-top: 3rem;
+}
 .addTask{
     border-radius: 10px;
     border: 2px solid #FFF;
@@ -43,7 +49,7 @@ svg, i{
     width: 30%;
     margin: auto;
     padding: 1rem;
-    margin-top: 10%;
+    margin-top: 12%;
     display: none;
     
 }
@@ -168,14 +174,21 @@ svg, i{
     display: none;
 }
 
+.taskBox{
+    display: none;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
 .Task1{
-    width: 45%;
-    
+    width: 48%;
+    /* display: none; */
     background-color: #354259;
     border-radius: 5px;
     border-bottom: 5px solid #54BAB9;
     color: white;
     padding: 1rem;
+    margin-bottom: 1rem;
 }
 
 .task-title{

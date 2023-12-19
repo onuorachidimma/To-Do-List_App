@@ -20,7 +20,7 @@
             <input type="text" id="title">
             <textarea name="" id="task" cols="30" rows="10" placeholder="What would you like to do?"></textarea>
             <button type="button" id="saveTask">Save</button>
-            
+            id="task"
         </form>
 
         <section class="taskCard">
@@ -29,9 +29,19 @@
         <button type="button" id="deleteTask">Delete Task</button>
     </main> -->
 
-    <div class="modal"></div>
+    <div class="modal">
+        <div class="addTask">
+            <p class="newTask">create task</p>
+            <form action="">
+                <input type="text" id="title" placeholder="Task Title">
+                <textarea name="" id="task" cols="30" rows="10" placeholder="Task details..."></textarea>
+                <button class="submitTask" type="button" id="saveTask">submit task</button>
+            </form>
 
-    <nav>
+        </div>
+    </div>
+
+    <nav class="nav">
         <div class="darkMode">
             <svg width="32" height="35" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 17.5C0 7.828 7.836 0 17.484 0c.888 0 2.32.13 3.196.293.75.138.918 1.143.256 1.518A13.704 13.704 0 0 0 14 13.734c0 8.57 7.79 15.079 16.273 13.461.747-.14 1.272.729.79 1.325A17.426 17.426 0 0 1 17.484 35C7.82 35 0 27.156 0 17.5Z" fill="#F7ECDE"/></svg>
         </div>
@@ -43,15 +53,15 @@
 
     <main>
 
-        <div class="addTask">
-            <p>create task</p>
+        <!-- <div class="addTask">
+            <p class="newTask">create task</p>
             <form action="">
                 <input type="text" placeholder="Task Title">
                 <textarea name="" id="" cols="30" rows="10" placeholder="Task details..."></textarea>
                 <button type="button">submit task</button>
             </form>
 
-        </div>
+        </div> -->
         <div class="allMain">
             <h2 class="appName">personal</h2>
             <h2 class="appName">task manager</h2>
@@ -81,8 +91,8 @@
                         <button type="button" class="addBtn">Add new task</button>
                         <button type="button">Clear completed</button>
                     </div>
-                    <div>
-                        <div class="Task1">
+                    <div class="taskBox">
+                        <!-- <div class="Task1">
                             <h3 class="task-title">Learn Javascript</h3>
                             <p>Today I will be leaarning Javascript with Stella</p>
                             <div class="mark-del">
@@ -96,13 +106,13 @@
 
                                 <svg width="16" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 18c-.55 0-1.021-.196-1.413-.588A1.922 1.922 0 0 1 1 16V3H0V1h5V0h6v1h5v2h-1v13c0 .55-.196 1.021-.588 1.413A1.922 1.922 0 0 1 13 18H3ZM13 3H3v13h10V3ZM5 14h2V5H5v9Zm4 0h2V5H9v9Z" fill="#FFDDD2"/></svg>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </section>
             </div>
         </div>
     </main>
 
-    <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/new.js"></script>
 </body>
 </html>
