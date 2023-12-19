@@ -29,6 +29,8 @@
         <button type="button" id="deleteTask">Delete Task</button>
     </main> -->
 
+    <div class="modal"></div>
+
     <nav>
         <div class="darkMode">
             <svg width="32" height="35" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 17.5C0 7.828 7.836 0 17.484 0c.888 0 2.32.13 3.196.293.75.138.918 1.143.256 1.518A13.704 13.704 0 0 0 14 13.734c0 8.57 7.79 15.079 16.273 13.461.747-.14 1.272.729.79 1.325A17.426 17.426 0 0 1 17.484 35C7.82 35 0 27.156 0 17.5Z" fill="#F7ECDE"/></svg>
@@ -40,52 +42,64 @@
     </nav>
 
     <main>
-        <h2 class="appName">personal</h2>
-        <h2 class="appName">task manager</h2>
 
-        <div class="mainContainer">
-            <section class="fixedLeftBar">
-                <div class="actions">
-                    <svg width="19" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 0a9.413 9.413 0 0 0-5.112 1.504A9.563 9.563 0 0 0 .882 5.555a9.69 9.69 0 0 0-.797 5.323 9.645 9.645 0 0 0 2.164 4.918l.173.204h14.156l.173-.204a9.646 9.646 0 0 0 2.164-4.918 9.69 9.69 0 0 0-.797-5.323 9.563 9.563 0 0 0-3.506-4.05A9.413 9.413 0 0 0 9.5 0Zm4.949 5.516-3.407 3.38c.174.372.213.795.109 1.193a1.746 1.746 0 0 1-.678.982 1.713 1.713 0 0 1-2.216-.199 1.76 1.76 0 0 1-.181-2.242 1.71 1.71 0 0 1 2.155-.56l3.4-3.38.818.826ZM1.214 9.106H3.17v1.163H1.19c0-.227-.028-.448-.028-.68 0-.233.011-.32.023-.484h.029Zm2.808-5.819L5.437 4.72l-.846.802-1.42-1.425c.254-.294.53-.57.822-.826l.029.017Zm6.053-.064h-1.15V1.187H9.5c.213 0 .403 0 .575.029v2.007Zm7.763 6.371c0 .227 0 .46-.029.68h-2.025V9.112h2.031c.012.157.023.32.023.483Z" fill="#FFDDD2"/></svg>
+        <div class="addTask">
+            <p>create task</p>
+            <form action="">
+                <input type="text" placeholder="Task Title">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Task details..."></textarea>
+                <button type="button">submit task</button>
+            </form>
 
-                    <p>Dashboard</p>
-                </div>
-                <div class="actions">
-                    <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 8.889h7.111V0H0v8.889ZM0 16h7.111v-5.333H0V16Zm8.889 0H16V7.111H8.889V16Zm0-16v5.333H16V0H8.889Z" fill="#FFDDD2"/></svg>
+        </div>
+        <div class="allMain">
+            <h2 class="appName">personal</h2>
+            <h2 class="appName">task manager</h2>
 
-                    <p>All Tasks</p>
-                </div>
-                <div class="actions">
-                    <svg width="17" height="17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.5 0c.78 0 1.533.1 2.258.299.725.199 1.4.487 2.025.863a9.315 9.315 0 0 1 1.719 1.328c.52.51.965 1.082 1.336 1.718a8.558 8.558 0 0 1 .863 6.55c-.199.725-.487 1.4-.863 2.025a9.315 9.315 0 0 1-1.328 1.719c-.51.52-1.082.965-1.719 1.336a8.558 8.558 0 0 1-6.549.863c-.725-.199-1.4-.487-2.025-.863a9.313 9.313 0 0 1-1.718-1.328 8.091 8.091 0 0 1-1.337-1.719A8.56 8.56 0 0 1 .3 6.242c.199-.725.487-1.4.863-2.025A9.313 9.313 0 0 1 2.49 2.499a8.092 8.092 0 0 1 1.718-1.337A8.56 8.56 0 0 1 8.5 0Zm5.005 5.686-1.129-1.129-5.47 5.47-2.282-2.282-1.13 1.129 3.412 3.411 6.6-6.599Z" fill="#FFDDD2"/></svg>
+            <div class="mainContainer">
+                <section class="fixedLeftBar">
+                    <div class="actions">
+                        <svg width="19" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 0a9.413 9.413 0 0 0-5.112 1.504A9.563 9.563 0 0 0 .882 5.555a9.69 9.69 0 0 0-.797 5.323 9.645 9.645 0 0 0 2.164 4.918l.173.204h14.156l.173-.204a9.646 9.646 0 0 0 2.164-4.918 9.69 9.69 0 0 0-.797-5.323 9.563 9.563 0 0 0-3.506-4.05A9.413 9.413 0 0 0 9.5 0Zm4.949 5.516-3.407 3.38c.174.372.213.795.109 1.193a1.746 1.746 0 0 1-.678.982 1.713 1.713 0 0 1-2.216-.199 1.76 1.76 0 0 1-.181-2.242 1.71 1.71 0 0 1 2.155-.56l3.4-3.38.818.826ZM1.214 9.106H3.17v1.163H1.19c0-.227-.028-.448-.028-.68 0-.233.011-.32.023-.484h.029Zm2.808-5.819L5.437 4.72l-.846.802-1.42-1.425c.254-.294.53-.57.822-.826l.029.017Zm6.053-.064h-1.15V1.187H9.5c.213 0 .403 0 .575.029v2.007Zm7.763 6.371c0 .227 0 .46-.029.68h-2.025V9.112h2.031c.012.157.023.32.023.483Z" fill="#FFDDD2"/></svg>
 
-                    <p>Completed Tasks</p>
-                </div>
-            </section>
+                        <p>Dashboard</p>
+                    </div>
+                    <div class="actions">
+                        <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 8.889h7.111V0H0v8.889ZM0 16h7.111v-5.333H0V16Zm8.889 0H16V7.111H8.889V16Zm0-16v5.333H16V0H8.889Z" fill="#FFDDD2"/></svg>
 
-            <section class="Task-sections">
-                <div class="task-bar">
-                    <p>5 Tasks</p>
-                    <h3>Add new task</h3>
-                    <p>Clear completed</p>
-                </div>
-                <div>
-                    <div class="Task1">
-                        <h3 class="task-title">Learn Javascript</h3>
-                        <p>Today I will be leaarning Javascript with Stella</p>
-                        <div class="mark-del">
-                            <div class="mark">
-                                <svg width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 18c-.55 0-1.021-.196-1.413-.588A1.922 1.922 0 0 1 0 16h2v2Zm-2-4v-2h2v2H0Zm0-4V8h2v2H0Zm0-4V4h2v2H0Zm0-4C0 1.45.196.979.588.587A1.922 1.922 0 0 1 2 0v2H0Zm4 12V4h10v10H4Zm0 4v-2h2v2H4ZM4 2V0h2v2H4Zm2 10h6V6H6v6Zm2 6v-2h2v2H8ZM8 2V0h2v2H8Zm4 16v-2h2v2h-2Zm0-16V0h2v2h-2Zm4 16v-2h2c0 .55-.196 1.021-.588 1.413A1.922 1.922 0 0 1 16 18Zm0-4v-2h2v2h-2Zm0-4V8h2v2h-2Zm0-4V4h2v2h-2Zm0-4V0c.55 0 1.021.196 1.413.588.392.392.588.863.587 1.412h-2Z" fill="#FFDDD2"/></svg>
-    
-                                <i class="fa-solid fa-square-check complete"></i>
-                                <p>Mark as complete</p>
+                        <p>All Tasks</p>
+                    </div>
+                    <div class="actions">
+                        <svg width="17" height="17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.5 0c.78 0 1.533.1 2.258.299.725.199 1.4.487 2.025.863a9.315 9.315 0 0 1 1.719 1.328c.52.51.965 1.082 1.336 1.718a8.558 8.558 0 0 1 .863 6.55c-.199.725-.487 1.4-.863 2.025a9.315 9.315 0 0 1-1.328 1.719c-.51.52-1.082.965-1.719 1.336a8.558 8.558 0 0 1-6.549.863c-.725-.199-1.4-.487-2.025-.863a9.313 9.313 0 0 1-1.718-1.328 8.091 8.091 0 0 1-1.337-1.719A8.56 8.56 0 0 1 .3 6.242c.199-.725.487-1.4.863-2.025A9.313 9.313 0 0 1 2.49 2.499a8.092 8.092 0 0 1 1.718-1.337A8.56 8.56 0 0 1 8.5 0Zm5.005 5.686-1.129-1.129-5.47 5.47-2.282-2.282-1.13 1.129 3.412 3.411 6.6-6.599Z" fill="#FFDDD2"/></svg>
+
+                        <p>Completed Tasks</p>
+                    </div>
+                </section>
+
+                <section class="Task-sections">
+                    <div class="task-bar">
+                        <p>5 Tasks</p>
+                        <h3>Add new task</h3>
+                        <p>Clear completed</p>
+                    </div>
+                    <div>
+                        <div class="Task1">
+                            <h3 class="task-title">Learn Javascript</h3>
+                            <p>Today I will be leaarning Javascript with Stella</p>
+                            <div class="mark-del">
+                                <div class="mark">
+                                    <svg width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 18c-.55 0-1.021-.196-1.413-.588A1.922 1.922 0 0 1 0 16h2v2Zm-2-4v-2h2v2H0Zm0-4V8h2v2H0Zm0-4V4h2v2H0Zm0-4C0 1.45.196.979.588.587A1.922 1.922 0 0 1 2 0v2H0Zm4 12V4h10v10H4Zm0 4v-2h2v2H4ZM4 2V0h2v2H4Zm2 10h6V6H6v6Zm2 6v-2h2v2H8ZM8 2V0h2v2H8Zm4 16v-2h2v2h-2Zm0-16V0h2v2h-2Zm4 16v-2h2c0 .55-.196 1.021-.588 1.413A1.922 1.922 0 0 1 16 18Zm0-4v-2h2v2h-2Zm0-4V8h2v2h-2Zm0-4V4h2v2h-2Zm0-4V0c.55 0 1.021.196 1.413.588.392.392.588.863.587 1.412h-2Z" fill="#FFDDD2"/></svg>
+        
+                                    <i class="fa-solid fa-square-check complete"></i>
+                                    <p>Mark as complete</p>
+                                </div>
+        
+
+                                <svg width="16" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 18c-.55 0-1.021-.196-1.413-.588A1.922 1.922 0 0 1 1 16V3H0V1h5V0h6v1h5v2h-1v13c0 .55-.196 1.021-.588 1.413A1.922 1.922 0 0 1 13 18H3ZM13 3H3v13h10V3ZM5 14h2V5H5v9Zm4 0h2V5H9v9Z" fill="#FFDDD2"/></svg>
                             </div>
-    
-
-                            <svg width="16" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 18c-.55 0-1.021-.196-1.413-.588A1.922 1.922 0 0 1 1 16V3H0V1h5V0h6v1h5v2h-1v13c0 .55-.196 1.021-.588 1.413A1.922 1.922 0 0 1 13 18H3ZM13 3H3v13h10V3ZM5 14h2V5H5v9Zm4 0h2V5H9v9Z" fill="#FFDDD2"/></svg>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            </div>
         </div>
     </main>
 

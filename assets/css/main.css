@@ -8,6 +8,17 @@ body{
     background-color: #1C273C;
     font-family: 'Open Sans', sans-serif;
     padding: 2rem;
+    position: relative;
+}
+
+.modal{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
 }
 
 /* NAV */
@@ -16,7 +27,7 @@ body{
     justify-content: flex-end;
 }
 
-.darkMode svg, .lightMode svg{
+svg, i{
     cursor: pointer;
 }
 
@@ -25,6 +36,58 @@ body{
 }
 
 /* MAIN */
+.addTask{
+    border-radius: 10px;
+    border: 2px solid #FFF;
+    background-color: #354259;
+    width: 30%;
+    margin: auto;
+    padding: 1rem;
+    margin-top: 10%;
+    
+}
+
+.addTask p{
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    margin: 10px;
+    
+}
+
+.addTask input, .addTask textarea, .addTask button{
+    display: block;
+}
+
+.addTask input, .addTask textarea{
+    width: 80%;
+    margin: auto;
+    color: #858585;
+    font-family: Open Sans;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+    outline: none;
+}
+
+.addTask button{
+    width: 37%;
+    margin: auto;
+    color: #44A0A0;
+    text-transform: uppercase;
+    background-color: white;
+    font-weight: 800;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.allMain, nav{
+    display: none;
+}
 
 .appName{
     color: #E9C597;
