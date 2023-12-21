@@ -3,6 +3,8 @@ const LightMode = document.querySelector(".lightMode")
 const DarkMode = document.querySelector(".darkMode")
 const changeMode = document.querySelector(".nav")
 
+
+// TO TOGGLE LIGHT AND DARK MODE
 var toggle = true;
 const toggleMode = () => {
     
@@ -25,18 +27,28 @@ const SubmitTask = document. querySelector(".submitTask")
 const titleTask = document.querySelector("#title")
 const ToDo = document.getElementById("task")
 const taskCardContainer = document.querySelector(".taskBox")
+const Del = document.querySelector(".delBtn")
+const Done = document.querySelector(".complete")
+const Active = document.querySelector(".active")
+const DoneDelete = document.querySelector(".doneDelete")
+
 // const taskCard = document.querySelector(".Task1")
 
+
+// TO DISPLAY MODAL AND INPUT FIELD
 const displayModal = () => {
     Modal.style.display = "block"
     AddTask.style.display = "block";
 }
 
+
+// FUNCTION TO ADD NEW TASK 
 const myToDo = () => {
     const Title = titleTask.value;
     const Task = ToDo.value;
-    const div = document.createElement("div");
-    div.innerHTML = `<h3 class="task-title">${Title}</h3>
+    const li = document.createElement("li");
+    li.innerHTML = `<div class="Task1">
+    <h3 class="task-title">${Title}</h3>
     <p>${Task}</p>
     <div class="mark-del">
         <div class="mark">
@@ -47,31 +59,34 @@ const myToDo = () => {
         </div>
 
 
-        <svg width="16" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 18c-.55 0-1.021-.196-1.413-.588A1.922 1.922 0 0 1 1 16V3H0V1h5V0h6v1h5v2h-1v13c0 .55-.196 1.021-.588 1.413A1.922 1.922 0 0 1 13 18H3ZM13 3H3v13h10V3ZM5 14h2V5H5v9Zm4 0h2V5H9v9Z" fill="#FFDDD2"/></svg>
-    </div>`
-    div.classList.add("Task1")
-    taskCardContainer.appendChild(div);
-}
-myToDo();
-// const myToDo = () => {
-//     const Title = titleTask.value;
-//     const Task = ToDo.value;
-//     const div = document.createElement("div");
-//     div.innerHTML = `<h3 id="taskTitle">${Title}</h3>
-//     <p id="taskDetail">${Task}</p>`
-//     div.classList.add("todoCard")
-//     taskCard.appendChild(div);
-// }
-// myToDo();
+        <svg class="delBtn" width="16" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 18c-.55 0-1.021-.196-1.413-.588A1.922 1.922 0 0 1 1 16V3H0V1h5V0h6v1h5v2h-1v13c0 .55-.196 1.021-.588 1.413A1.922 1.922 0 0 1 13 18H3ZM13 3H3v13h10V3ZM5 14h2V5H5v9Zm4 0h2V5H9v9Z" fill="#FFDDD2"/></svg>
+    </div>
+</div>`
 
+    taskCardContainer.appendChild(li);
+}
+
+// FUNCTION TO DELETE TASK
+
+
+
+
+
+// TO CLOSE MODAL AND INPUT FIELD TO ADD TASK
 const closeModal = () => {
     Modal.style.display = "none"
     AddTask.style.display = "none";
     taskCardContainer.style.display = "flex"
 }
 
+
+// CLICK EVENT TO ADD THE NEW TASK
 NewTask.addEventListener('click', displayModal);
 SubmitTask.addEventListener('click', () => {
     closeModal();
     myToDo();
 });
+
+
+
+
