@@ -26,9 +26,6 @@ body{
 nav{
     float: right;
 }
-.darkMode, .lightMode{
-   
-}
 
 svg, i{
     cursor: pointer;
@@ -125,10 +122,10 @@ main{
     border: none;
 }
 
-
 .mark{
     display: flex;
 }
+
 
 .mark > p{
     margin-left: 10px;

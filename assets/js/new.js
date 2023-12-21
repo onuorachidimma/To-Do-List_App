@@ -36,7 +36,7 @@ const myToDo = () => {
             <p>${Task}</p>
             <div class="mark-del">
                 <div class="mark">
-                    <svg width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="active" onclick="toggleMark(this)" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M2 18c-.55 0-1.021-.196-1.413-.588A1.922 1.922 0 0 1 0 16h2v2Zm-2-4v-2h2v2H0Zm0-4V8h2v2H0Zm0-4V4h2v2H0Zm0-4C0 1.45.196.979.588.587A1.922 1.922 0 0 1 2 0v2H0Zm4 12V4h10v10H4Zm0 4v-2h2v2H4ZM4 2V0h2v2H4Zm2 10h6V6H6v6Zm2 6v-2h2v2H8ZM8 2V0h2v2H8Zm4 16v-2h2v2h-2Zm0-16V0h2v2h-2Zm4 16v-2h2c0 .55-.196 1.021-.588 1.413A1.922 1.922 0 0 1 16 18Zm0-4v-2h2v2h-2Zm0-4V8h2v2h-2Zm0-4V4h2v2h-2Zm0-4V0c.55 0 1.021.196 1.413.588.392.392.588.863.587 1.412h-2Z" fill="#FFDDD2"/>
                     </svg>
                     <i class="fa-solid fa-square-check complete"></i>
@@ -47,6 +47,7 @@ const myToDo = () => {
                 </svg>
             </div>
         </div>`;
+        
 
         taskCardContainer.appendChild(li);
     }
@@ -68,6 +69,7 @@ SubmitTask.addEventListener('click', () => {
     myToDo();
 });
 
+
 // FUNCTION TO DELETE TASK
 function deleteTask(button) {
     var taskItem = button.parentNode.parentNode; // Adjusted to access the grandparent node
@@ -75,12 +77,11 @@ function deleteTask(button) {
     taskList.removeChild(taskItem);
 }
 
-
+// TO TOGGLE LIGHT AND DARK MODE(THE STYLING HAS NOT BEEN EFFECTED)
 const LightMode = document.querySelector(".lightMode")
 const DarkMode = document.querySelector(".darkMode")
 const changeMode = document.querySelector(".nav")
 
-// TO TOGGLE LIGHT AND DARK MODE
 var toggle = true;
 const toggleMode = () => {
     
