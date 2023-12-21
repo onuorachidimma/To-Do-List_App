@@ -67,6 +67,38 @@ const myToDo = () => {
 }
 
 // FUNCTION TO DELETE TASK
+// ... (your existing code)
+
+// FUNCTION TO TOGGLE COMPLETION STATE OF TASK
+const toggleComplete = (taskCard) => {
+    const checkbox = taskCard.querySelector(".fa-square-check");
+    checkbox.classList.toggle("complete");
+    // You can also update your data model here to track the completion state
+};
+
+// FUNCTION TO DELETE TASK
+const deleteTask = (taskCard) => {
+    taskCard.remove();
+    // You can also update your data model here to remove the task
+};
+
+// EVENT DELEGATION FOR CHECKING AND DELETING TASKS
+taskCardContainer.addEventListener('click', (event) => {
+    const target = event.target;
+
+    // Check if the clicked element is the checkbox or delete icon
+    if (target.classList.contains("fa-square-check")) {
+        // Toggle completion state
+        const taskCard = target.closest(".Task1");
+        toggleComplete(taskCard);
+    } else if (target.classList.contains("delBtn")) {
+        // Delete task
+        const taskCard = target.closest(".Task1");
+        deleteTask(taskCard);
+    }
+});
+
+// ... (your existing code)
 
 
 
