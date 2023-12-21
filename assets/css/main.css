@@ -49,7 +49,7 @@ main{
     width: 30%;
     margin: auto;
     padding: 1rem;
-    margin-top: 12%;
+    margin-top: 10%;
     display: none;
     
 }
@@ -169,6 +169,8 @@ li{
     justify-content: space-between;
     margin-top: 5px;
 }
+
+
 @media screen and (max-width: 912px) {
     .mainContainer{
         width: 90%;
@@ -184,4 +186,5 @@ li{
     .addTask{
         width: 80%;
     } 
+}
 

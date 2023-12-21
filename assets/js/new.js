@@ -26,46 +26,31 @@ const displayModal = () => {
 const myToDo = () => {
     const Title = titleTask.value;
     const Task = ToDo.value;
-    const li = document.createElement("li");
-    li.innerHTML = `<div class="Task1">
-    <h3 class="task-title">${Title}</h3>
-    <p>${Task}</p>
-    <div class="mark-del">
-        <div class="mark">
-            <svg width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 18c-.55 0-1.021-.196-1.413-.588A1.922 1.922 0 0 1 0 16h2v2Zm-2-4v-2h2v2H0Zm0-4V8h2v2H0Zm0-4V4h2v2H0Zm0-4C0 1.45.196.979.588.587A1.922 1.922 0 0 1 2 0v2H0Zm4 12V4h10v10H4Zm0 4v-2h2v2H4ZM4 2V0h2v2H4Zm2 10h6V6H6v6Zm2 6v-2h2v2H8ZM8 2V0h2v2H8Zm4 16v-2h2v2h-2Zm0-16V0h2v2h-2Zm4 16v-2h2c0 .55-.196 1.021-.588 1.413A1.922 1.922 0 0 1 16 18Zm0-4v-2h2v2h-2Zm0-4V8h2v2h-2Zm0-4V4h2v2h-2Zm0-4V0c.55 0 1.021.196 1.413.588.392.392.588.863.587 1.412h-2Z" fill="#FFDDD2"/></svg>
 
-            <i class="fa-solid fa-square-check complete"></i>
-            <p>Mark as complete</p>
-        </div>
+    if (Title === '') {
+        alert('Please input a task');
+    } else {
+        const li = document.createElement('li');
+        li.innerHTML = `<div class="Task1">
+            <h3 class="task-title">${Title}</h3>
+            <p>${Task}</p>
+            <div class="mark-del">
+                <div class="mark">
+                    <svg width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 18c-.55 0-1.021-.196-1.413-.588A1.922 1.922 0 0 1 0 16h2v2Zm-2-4v-2h2v2H0Zm0-4V8h2v2H0Zm0-4V4h2v2H0Zm0-4C0 1.45.196.979.588.587A1.922 1.922 0 0 1 2 0v2H0Zm4 12V4h10v10H4Zm0 4v-2h2v2H4ZM4 2V0h2v2H4Zm2 10h6V6H6v6Zm2 6v-2h2v2H8ZM8 2V0h2v2H8Zm4 16v-2h2v2h-2Zm0-16V0h2v2h-2Zm4 16v-2h2c0 .55-.196 1.021-.588 1.413A1.922 1.922 0 0 1 16 18Zm0-4v-2h2v2h-2Zm0-4V8h2v2h-2Zm0-4V4h2v2h-2Zm0-4V0c.55 0 1.021.196 1.413.588.392.392.588.863.587 1.412h-2Z" fill="#FFDDD2"/>
+                    </svg>
+                    <i class="fa-solid fa-square-check complete"></i>
+                    <p>Mark as complete</p>
+                </div>
+                <svg class="delBtn" onclick="deleteTask(this)" width="16" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 18c-.55 0-1.021-.196-1.413-.588A1.922 1.922 0 0 1 1 16V3H0V1h5V0h6v1h5v2h-1v13c0 .55-.196 1.021-.588 1.413A1.922 1.922 0 0 1 13 18H3ZM13 3H3v13h10V3ZM5 14h2V5H5v9Zm4 0h2V5H9v9Z" fill="#FFDDD2"/>
+                </svg>
+            </div>
+        </div>`;
 
-
-        <svg class="delBtn" width="16" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 18c-.55 0-1.021-.196-1.413-.588A1.922 1.922 0 0 1 1 16V3H0V1h5V0h6v1h5v2h-1v13c0 .55-.196 1.021-.588 1.413A1.922 1.922 0 0 1 13 18H3ZM13 3H3v13h10V3ZM5 14h2V5H5v9Zm4 0h2V5H9v9Z" fill="#FFDDD2"/></svg>
-    </div>
-</div>`
-
-    taskCardContainer.appendChild(li);
-}
-
-// FUNCTION TO DELETE TASK
-
-const deleteTask = (taskCard) => {
-    taskCard.remove();
-    
-    const remainingTasks = document.querySelectorAll(".Task1");
-    if (remainingTasks.length === 0) {
-        taskCardContainer.innerHTML = ""; 
+        taskCardContainer.appendChild(li);
     }
 };
-
-taskCardContainer.addEventListener('click', (event) => {
-    const target = event.target;
-
-    if (target.classList.contains("delBtn")) {
-        const taskCard = target.closest(".Task1");
-        deleteTask(taskCard);
-    }
-});
-
 
 
 // TO CLOSE MODAL AND INPUT FIELD TO ADD TASK
@@ -82,6 +67,13 @@ SubmitTask.addEventListener('click', () => {
     closeModal();
     myToDo();
 });
+
+// FUNCTION TO DELETE TASK
+function deleteTask(button) {
+    var taskItem = button.parentNode.parentNode; // Adjusted to access the grandparent node
+    var taskList = taskItem.parentNode;
+    taskList.removeChild(taskItem);
+}
 
 
 const LightMode = document.querySelector(".lightMode")
