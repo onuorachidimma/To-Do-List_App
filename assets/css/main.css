@@ -169,4 +169,19 @@ li{
     justify-content: space-between;
     margin-top: 5px;
 }
+@media screen and (max-width: 912px) {
+    .mainContainer{
+        width: 90%;
+    }
+    li{
+        width: 100%;
+    }
+
+    .Task-sections .addBtn{
+        width: 50%;
+    }
+    
+    .addTask{
+        width: 80%;
+    } 
 
